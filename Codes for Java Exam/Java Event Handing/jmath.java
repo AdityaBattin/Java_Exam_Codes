@@ -79,26 +79,28 @@ public class jmath extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent pe) {
         String s = pe.getActionCommand();
         Double c;
+        Double d = Double.parseDouble(ta1.getText());
+        Double e = Double.parseDouble(ta2.getText());
 
         if (s.equals("Addition")) {
-            c = (Double.parseDouble(ta1.getText()) + Double.parseDouble(ta2.getText()));
+            c = (d + e);
             ta_re.setText("Result -> " + c);
         } else if (s.equals("Multiplication")) {
 
-            c = (Double.parseDouble(ta1.getText()) * Double.parseDouble(ta2.getText()));
+            c = d * e;
             ta_re.setText("Result -> " + c);
 
         } else if (s.equals("Division")) {
 
-            c = (Double.parseDouble(ta1.getText()) / Double.parseDouble(ta2.getText()));
+            c = d / e;
             ta_re.setText("Result -> " + c);
 
         } else if (s.equals("Substraction")) {
 
-            c = (Double.parseDouble(ta1.getText()) - Double.parseDouble(ta2.getText()));
+            c = d - e;
             ta_re.setText("Result -> " + c);
 
-        } else {
+        }else {
             ta_re.setText("");
         }
     }
